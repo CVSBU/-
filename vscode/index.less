@@ -1,0 +1,193 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box ;
+}
+#app{
+    .app-header{
+        background: color #f2f2f2;
+        padding: 2px;
+        .app-header-coupon{
+            height: 50px;
+            width: 100%;
+            img{
+                 height: 100%;
+                 width: 100%;
+            }
+        }
+      
+    .app-header-wrapper {
+      height:40px;
+        display:flex;
+        align-items: center;
+        .header-wrapper-left {
+          flex:1;
+          display: flex;
+           align-items: center;
+          //  响应式布局，align-items与align-content要与display：flex一起使用
+          // align-items: center是设置交叉轴的垂直对齐方式;align:content设置同一列子元素在Y轴的对齐方式
+          // justify-content:设置同一行子元素在X轴的对齐方式即水平
+          justify-content: center;
+           img {
+            height:20px;
+            width:30px;
+           }
+         }
+       
+        .header-wrapper-middle {
+          flex:6;
+          display: flex;
+          align-items: center;
+          background-color: #fff;
+          height: 30px;
+          .wrapper-middle-img {
+            display: flex;
+            align-items:center;
+             img {
+                height: 20px;
+                width:20px;
+             }
+           }
+       
+          .wrapper-middle-ph {
+             color: #b2b2b2;
+           }
+         }
+       
+        .header-wrapper-right {
+          flex:1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+           img {
+              height: 30px;
+              width: 30px;
+           }
+         }
+       }
+      .app-header-nav {
+        display: flex;
+        height: 40px;
+      .header-nav-left {
+           flex:1;
+        }
+      
+        .header-nav-list {
+          flex:6;
+          display:flex;
+          align-items:center;
+          .nav-list-item {
+            flex:1;
+    // flex:1指的是让5个词语排列均匀,5个flex为1的词语平分整个flex为6的盒子
+          text-align: center;
+          .active{
+            color:#ff6900;
+            border-bottom:2px solid #ff6900;
+          }
+  span.nav-list-item-title {
+      
+            }
+          }
+      
+          undefined {
+      
+          }
+        }
+      
+        .app-header-nav-right {
+          flex:1
+        }
+      }
+      }
+      .app-body{
+        
+        // 这里设置calc函数，vw表示屏幕的宽度的单位,100vw指整个屏幕宽度,100vh指整个屏幕的高度,并且
+        // 这两个和设备无关，适用所有设备,上面的导航栏加下面的导航栏高度是180px,所以中间的滚动部分用屏幕
+        // 的高度100vh减去180px,注意减号两边要加空格,css就会动态计算中间部分高度,再在中间部分加入内容
+        // 设置y轴方向滚动就实现效果了
+        height: calc(100vh - 180px);
+        overflow-y:scroll;
+        overflow-x: hidden;
+        .app-body-swiper {
+          img {
+              width:100%;
+              height:100%;
+          }
+        }
+
+        .app-body-cells {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 10px;                                                                            
+          .body-cells-item {
+            width:20%;
+            img {
+                height:100%;
+                width:100%;
+            }
+          }
+        }
+        .app-body-floor {
+          display: flex;
+          // 这里flex指左右排列，左右两个盒子等行排列
+          .body-floor-left {
+            
+            flex: 1;
+              
+            
+            height: 300px;
+            img {
+               
+               height: 300px;
+               width: 100%;
+            }
+          }
+        
+          .body-floor-right {
+            height: 300px;
+            flex:1;
+            .body-floor-right-top {
+              padding-bottom: 1px;
+// 右边盒子分上下两个,盒子大小为150px,再上下两盒子各留出1px内边距,两张图片缩小1px为149px即流出空隙
+              height:150px;
+              img {
+        width:100%;
+        height:149px;
+              }
+            }
+        
+            .body-floor-right-bottom {
+              padding-top: 1px;
+              
+              img {
+                width:100%;
+                height:149px;
+              }
+            }
+          }
+        }
+      }
+      .app-footer {
+          height:50px;
+          display: flex;
+        .footer-items-item { 
+          flex:1;
+          display:flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+            img {
+                  height:20px;
+                  width:20px;
+            }
+             .active{
+              color: #ff713b;
+             }
+            .item-title {
+      
+            }
+          }
+        
+      
+    }
+  }
